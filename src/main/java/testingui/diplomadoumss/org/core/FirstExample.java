@@ -1,5 +1,8 @@
 package testingui.diplomadoumss.org.core;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import testingui.diplomadoumss.org.login.Login;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 import java.util.HashMap;
@@ -8,10 +11,9 @@ import java.util.Map;
 public class FirstExample {
     public static void main(String[] args) {
 
-        BroserType browserType = BroserType.valueOf(PropertyAccesor.getInstance().getBrowser());
-        Browser browser = DriverFactory.getInstance().getBrowser(browserType);
-        browser.getWebDriver().get(PropertyAccesor.getInstance().getURL());
-        browser.getWebDriver().quit();
+        WebDriver webDriver= DriverManager.getInstance().getWebDriver();
+        webDriver.get(PropertyAccesor.getInstance().getURL());
+        webDriver.quit();
 
 //        exampleMap();
     }
