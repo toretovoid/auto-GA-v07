@@ -11,8 +11,8 @@ public class Login extends BasePage {
     @FindBy(xpath = "//input[@name='email' and @type='email']")
     private WebElement emailTextField;
 
-    public void setEmail(String email){
-        emailTextField.sendKeys(email);
+    public void setEmail(String username){
+        emailTextField.sendKeys(username);
     }
 
     @FindBy(xpath = "//input[@name='password' and @type='password']")

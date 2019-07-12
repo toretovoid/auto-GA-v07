@@ -2,6 +2,7 @@ package testingui.diplomadoumss.org.core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import testingui.diplomadoumss.org.login.Login;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
@@ -13,8 +14,12 @@ public class FirstExample {
 
         WebDriver webDriver= DriverManager.getInstance().getWebDriver();
         webDriver.get(PropertyAccesor.getInstance().getURL());
-        webDriver.quit();
 
+        Login login = PageFactory.initElements(webDriver,Login.class);
+        login.setEmail(PropertyAccesor.getInstance().getUsername());
+        login.setPassword(PropertyAccesor.getInstance().getPasssword());
+        login.setButtonValue();
+        webDriver.quit();
 //        exampleMap();
     }
 
