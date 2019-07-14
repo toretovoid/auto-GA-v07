@@ -1,7 +1,6 @@
 package testingui.diplomadoumss.org.core;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import testingui.diplomadoumss.org.login.Login;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;

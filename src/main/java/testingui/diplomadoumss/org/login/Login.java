@@ -8,7 +8,7 @@ import testingui.diplomadoumss.org.managepage.BasePage;
 
 public class Login extends BasePage {
 
-    @FindBy(xpath = "//input[@name='email' and @type='email']")
+    @FindBy(xpath = "//input[@name='email' and @type='text']")
     private WebElement emailTextField;
 
     public void setEmail(String username){
